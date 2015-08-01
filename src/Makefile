@@ -2,7 +2,7 @@
 # Compiler and flags
 CC= g++
 CCOMP= gcc
-CFLAGS= -O3
+CFLAGS= -O3 -std=c++0x
 #CFLAGS= -g
 
 # NETCDF library directories
