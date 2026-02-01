@@ -272,7 +272,7 @@ void OfflineMap::InitializeDimensionsFromMeshFile(
 			std::string strGridCenterLonUnits = attGridCenterLonUnits->as_string(0);
 			if (strGridCenterLonUnits == "degrees") {
 
-			} else if (strGridCenterLonUnits == "radians") {
+			} else if (strGridCenterLonUnits.substr(0,6) == "radian" ) {
 				for (int i = 0; i < dCenterLon.GetRows(); i++) {
 					dCenterLon[i] *= 180.0 / M_PI;
 				}
@@ -300,7 +300,7 @@ void OfflineMap::InitializeDimensionsFromMeshFile(
 			std::string strGridCenterLatUnits = attGridCenterLatUnits->as_string(0);
 			if (strGridCenterLatUnits == "degrees") {
 
-			} else if (strGridCenterLatUnits == "radians") {
+			} else if (strGridCenterLatUnits.substr(0,6) == "radian" ) {
 				for (int i = 0; i < dCenterLat.GetRows(); i++) {
 					dCenterLat[i] *= 180.0 / M_PI;
 				}
@@ -331,7 +331,7 @@ void OfflineMap::InitializeDimensionsFromMeshFile(
 			std::string strGridVertexLonUnits = attGridVertexLonUnits->as_string(0);
 			if (strGridVertexLonUnits == "degrees") {
 
-			} else if (strGridVertexLonUnits == "radians") {
+			} else if (strGridVertexLonUnits.substr(0,6) == "radian") {
 				for (int i = 0; i < dVertexLon.GetRows(); i++) {
 				for (int j = 0; j < dVertexLon.GetColumns(); j++) {
 					dVertexLon[i][j] *= 180.0 / M_PI;
@@ -364,7 +364,7 @@ void OfflineMap::InitializeDimensionsFromMeshFile(
 			std::string strGridVertexLatUnits = attGridVertexLatUnits->as_string(0);
 			if (strGridVertexLatUnits == "degrees") {
 
-			} else if (strGridVertexLatUnits == "radians") {
+			} else if (strGridVertexLatUnits.substr(0,6) == "radian") {
 				for (int i = 0; i < dVertexLat.GetRows(); i++) {
 				for (int j = 0; j < dVertexLat.GetColumns(); j++) {
 					dVertexLat[i][j] *= 180.0 / M_PI;
